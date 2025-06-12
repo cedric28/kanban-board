@@ -1,26 +1,25 @@
-# Minimalist Kanban Board
+# 🧩 Minimalist Kanban Board
 
-This project is a minimalist Kanban board built with **React**, **TypeScript**, **Material UI**, and **Framer Motion**. It allows you to manage tasks across four columns: Not Started, In Progress, Blocked, and Done. Tasks are draggable between columns and persist across reloads.
+This project is a minimalist Kanban board built with **React**, **TypeScript**, **Material UI**, and **Framer Motion**.  
+It allows you to manage tasks across four columns: **Not Started**, **In Progress**, **Blocked**, and **Done**.  
+Tasks are draggable between columns and persist across reloads.
+
+🌐 **Live Demo**: [https://kanban-board-lake-nine.vercel.app/](https://kanban-board-lake-nine.vercel.app/)
 
 ---
 
 ## ✨ Features
 
-- 🧱 **Four Columns**: Not Started, In Progress, Blocked, Done
-
-- 🖱️ **Draggable Tasks**: Drag and drop tasks between columns
-
-- 💾 **Task Persistence**: Tasks are saved in local storage
-
-- ➕ **Create Tasks**: Add new tasks with optional due dates and subtasks
-
-- ✅ **Subtasks**: Support for subtasks with completion indicators
-
-- ⏰ **Due Dates**: Highlighted based on urgency
-
-- 🎞️ **Animations**: Smooth transitions during drag and state changes
+- 🧱 **Four Columns** – Not Started, In Progress, Blocked, Done  
+- 🖱️ **Draggable Tasks** – Drag and drop tasks between columns  
+- 💾 **Task Persistence** – Tasks are saved in local storage  
+- ➕ **Create Tasks** – Add new tasks with optional due dates and subtasks  
+- ✅ **Subtasks** – Support for subtasks with completion indicators  
+- ⏰ **Due Dates** – Highlighted based on urgency  
+- 🎞️ **Animations** – Smooth transitions during drag and state changes  
 
 ---
+
 ## 🗂️ Project Structure
 
 ```plaintext
@@ -37,32 +36,44 @@ This project is a minimalist Kanban board built with **React**, **TypeScript**, 
 │   └── 🎨 theme.ts
 ├── 📄 package.json
 └── 📄 tsconfig.json
+```
 
----
 ## 🚀 Getting Started
 
-### Prerequisites
+Follow the steps below to set up and run the Kanban Board project on your local machine.
 
-- Node.js (v14 or later)
+---
 
-- npm
+### 📦 Prerequisites
 
-### Installation
+Make sure you have the following installed:
 
-1. **Clone the repository**:
+- 🟢 **Node.js** (version 14 or higher)
+- 📦 **npm** (comes with Node.js)
 
+---
+
+### 🔧 Installation & Setup
+
+1. **Clone the repository**
    ```bash
+    git clone https://github.com/your-username/kanban-board.git
+    cd kanban-board ```
 
-   git clone https://github.com/your-username/kanban-board.git
+2. **Install dependencies**
 
-   cd kanban-board
-
+ ```bash
+  npm install
    ```
 
-2. Install dependencies:
 
-npm install
+3. **Start the development server**
+  ```bash
+  npm start
+  ```
 
-3. Start the development server:
+4. **Open your browser**
 
-npm start
+```plaintext
+Visit http://localhost:3000 to use the app.
+```
