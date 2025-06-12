@@ -23,19 +23,20 @@ This project is a minimalist Kanban board built with **React**, **TypeScript**, 
 ---
 ## 🗂️ Project Structure
 
-kanban-board/
-├── public/
-├── src/
-│   ├── components/
-|   |   └── modal/
-│   ├── context/
-│   ├── types/
-│   ├── utils/
-│   ├── App.tsx
-│   ├── index.tsx
-│   └── theme.ts
-├── package.json
-└── tsconfig.json
+🗂️ Kanban Board
+├── 📂 public
+├── 📂 src
+│   ├── 📁 components
+│   │   └── 🪟 modal
+│   ├── 📁 context
+│   ├── 📁 types
+│   ├── 📁 utils
+│   ├── 📄 App.tsx
+│   ├── 📄 index.tsx
+│   └── 🎨 theme.ts
+├── 📄 package.json
+└── 📄 tsconfig.json
+
 
 ## 🚀 Getting Started
 
