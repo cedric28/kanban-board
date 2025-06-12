@@ -10,7 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import TaskCard from './TaskCard';
 import { Task } from '../types/task';
 import { useTasks } from '../context/TaskContext';
-import type { TaskStatus } from '../utils/status';
+import { getStatusColor, getCountBadgeColor } from '../utils/status';
 import TaskModal from './modal/TaskModal';
 
 interface ColumnProps {
@@ -21,21 +21,6 @@ interface ColumnProps {
   onDragStart: (task: Task) => void;
   onDragEnd: (event: MouseEvent) => void;
 }
-
-const getStatusColor = (status: TaskStatus): string => {
-  switch (status) {
-    case 'not_started':
-      return '#d3d3d3'; // Light gray
-    case 'in_progress':
-      return '#e0bbff'; // Light purple
-    case 'blocked':
-      return '#ffcccc'; // Light red
-    case 'done':
-      return '#b2fab4'; // Light green
-    default:
-      return '#e0e0e0';
-  }
-};
 
 
 const Column: React.FC<ColumnProps> = ({
@@ -56,17 +41,37 @@ const Column: React.FC<ColumnProps> = ({
   return (
     <Box>
       <Stack direction="row" justifyContent="space-between" alignItems="center" mb={1}>
-        <Box
+      <Box
           sx={{
             bgcolor: getStatusColor(status),
             px: 2,
             py: 0.5,
             borderRadius: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
           }}
         >
           <Typography variant="subtitle2" fontWeight="bold">
             {title}
           </Typography>
+
+          <Box
+            sx={{
+              bgcolor: getCountBadgeColor(status),
+              color: '#fff',
+              px: 1,
+              borderRadius: '50%',
+              fontSize: '0.75rem',
+              minWidth: 20,
+              height: 20,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {tasks.length}
+          </Box>
         </Box>
 
         <IconButton size="small" color="primary" onClick={() => setOpen(true)}>
