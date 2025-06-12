@@ -55,7 +55,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onDragStart, onDragEnd }) => 
 
   return (
     <>
-      <DropIndicator beforeId={task.id} column={task.status} />
+      <DropIndicator beforeId={task.id} status={task.status} />
       <motion.div
         layout
         layoutId={task.id}

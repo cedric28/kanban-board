@@ -12,6 +12,7 @@ import { Task } from '../types/task';
 import { useTasks } from '../context/TaskContext';
 import { getStatusColor, getCountBadgeColor } from '../utils/status';
 import TaskModal from './modal/TaskModal';
+import DropIndicator from './DropIndicator';
 
 interface ColumnProps {
   title: string;
@@ -92,6 +93,7 @@ const Column: React.FC<ColumnProps> = ({
               onDragEnd={onDragEnd}
             />
           ))}
+          <DropIndicator beforeId={null} status={status} />
         </div>
 
         <TaskModal

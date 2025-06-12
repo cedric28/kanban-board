@@ -3,14 +3,14 @@ import { Box } from "@mui/material";
 
 interface DropIndicatorProps {
   beforeId: string | null;
-  column: string;
+  status: string;
 }
 
-const DropIndicator = ({ beforeId, column }: DropIndicatorProps): JSX.Element => {
+const DropIndicator: React.FC<DropIndicatorProps>  = ({ beforeId, status }) => {
   return (
     <Box
       data-before={beforeId || "-1"}
-      data-column={column}
+      data-status={status}
       sx={{
         my: 0.5,
         height: '2px',
