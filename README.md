@@ -23,8 +23,6 @@ This project is a minimalist Kanban board built with **React**, **TypeScript**, 
 ---
 ## 🗂️ Project Structure
 
-## 🚀 Project Structure
-
 ```plaintext
 🗂️ Kanban Board
 ├── 📂 public
@@ -40,8 +38,7 @@ This project is a minimalist Kanban board built with **React**, **TypeScript**, 
 ├── 📄 package.json
 └── 📄 tsconfig.json
 
-
-
+---
 ## 🚀 Getting Started
 
 ### Prerequisites
