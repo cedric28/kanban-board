@@ -57,9 +57,12 @@ export const loadTasks = (): Task[] => {
 
     const parsed: Task[] = JSON.parse(data);
 
-    // Check for duplicate IDs before merging
-    const existingIds = new Set(parsed.map(task => task.id));
-    const newTasks = sampleTasks.filter(task => !existingIds.has(task.id));
+    // Prevent duplicates by id **and** title
+    const existingKeys = new Set(parsed.map(task => task.title));
+
+    const newTasks = sampleTasks.filter(
+      task => !existingKeys.has(task.title)
+    );
 
     const merged = [...parsed, ...newTasks];
     localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
@@ -71,7 +74,6 @@ export const loadTasks = (): Task[] => {
     return sampleTasks;
   }
 };
-
 
 
 export const saveTasks = (tasks: Task[]) => {
